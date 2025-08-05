@@ -1,0 +1,36 @@
+import { fileIconsPathsSvg } from "../data";
+import ImageIcon from "./ImageIcon";
+import FileIcon from "./SVG/File";
+
+interface Iprops {
+	name: string;
+	isFolder?: boolean;
+	isOpen?: boolean;
+}
+
+const FileRenderIcon = ({ name, isFolder, isOpen }: Iprops) => {
+	const fileExtension = name.toLowerCase().split(".").pop();
+
+	const fileIconsPaths = fileIconsPathsSvg;
+
+	if (
+		fileExtension &&
+		Object.prototype.hasOwnProperty.call(fileIconsPaths, fileExtension)
+	) {
+		const iconPath = isFolder
+			? isOpen
+				? `${fileIconsPaths[fileExtension]}-open.svg`
+				: `${fileIconsPaths[fileExtension]}.svg`
+			: `${fileIconsPaths[fileExtension]}.svg`;
+
+		return <ImageIcon src={iconPath} />;
+	}
+
+	if (isFolder && isOpen)
+		return <ImageIcon src='/public/icons/folder-default-open.svg' />;
+	if (isFolder && !isOpen)
+		return <ImageIcon src='/public/icons/folder-default.svg' />;
+	return <FileIcon />;
+};
+
+export default FileRenderIcon;

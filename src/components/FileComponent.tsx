@@ -2,8 +2,7 @@ import { useState } from "react";
 import type { IFile } from "../interfaces";
 import BottomArrowIcon from "./SVG/Bottom";
 import RightArrowIcon from "./SVG/Right";
-import FolderIcon from "./SVG/Folder";
-import FileIcon from "./SVG/File";
+import FileRenderIcon from "./FileRenderIcon";
 
 interface Iprops {
 	fileTree: IFile;
@@ -23,10 +22,14 @@ const FileComponent = ({ fileTree: { name, isFolder, children } }: Iprops) => {
 				{isFolder ? (
 					<div className='flex items-center space-x-2'>
 						{isOpenFolder ? <BottomArrowIcon /> : <RightArrowIcon />}
-						<FolderIcon />
+						<FileRenderIcon
+							name={name}
+							isFolder={isFolder}
+							isOpen={isOpenFolder}
+						/>
 					</div>
 				) : (
-					<FileIcon />
+					<FileRenderIcon name={name} />
 				)}
 				<p className='text-xl font-medium'>{name}</p>
 			</div>
