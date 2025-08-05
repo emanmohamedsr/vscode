@@ -6,13 +6,14 @@ import FileRenderIcon from "./FileRenderIcon";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../app/store";
 import { setOpenedFiles } from "../app/features/fileTreeSlice";
+import { doseFileObjectExist } from "../utils";
 
 interface Iprops {
 	fileTree: IFile;
 }
 
 const FileComponent = ({ fileTree }: Iprops) => {
-	const { name, isFolder, children } = fileTree;
+	const { id, name, isFolder, children } = fileTree;
 
 	const { openedFiles } = useSelector(({ fileTree }: RootState) => fileTree);
 	const dispatch = useDispatch();
@@ -20,8 +21,11 @@ const FileComponent = ({ fileTree }: Iprops) => {
 	const [isOpenFolder, setIsOpenFolder] = useState<boolean>(true);
 	//** Handlers */
 	const toggleOpenFileHandler = () => setIsOpenFolder((prev) => !prev);
-	const addOpenedFileHandler = () =>
+	const addOpenedFileHandler = () => {
+		const exists = doseFileObjectExist(openedFiles, id);
+		if (exists) return;
 		dispatch(setOpenedFiles([...openedFiles, fileTree]));
+	};
 	return (
 		<div className='m-4 my-2'>
 			{isFolder ? (
