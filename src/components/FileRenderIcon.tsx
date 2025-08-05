@@ -1,4 +1,4 @@
-import { fileIconsPathsSvg } from "../constants";
+import { fileIconsPaths } from "../constants";
 import ImageIcon from "./ImageIcon";
 import FileIcon from "./SVG/File";
 
@@ -10,8 +10,6 @@ interface Iprops {
 
 const FileRenderIcon = ({ name, isFolder, isOpen }: Iprops) => {
 	const fileExtension = name.toLowerCase().split(".").pop();
-
-	const fileIconsPaths = fileIconsPathsSvg;
 
 	if (
 		fileExtension &&

@@ -1,4 +1,4 @@
-export const fileIconsPathsSvg: Record<string, string> = {
+export const fileIconsPaths: Record<string, string> = {
 	//** Core Web Files */
 	html: "/public/icons/html",
 	css: "/public/icons/css",
