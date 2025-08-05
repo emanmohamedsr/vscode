@@ -1,5 +1,12 @@
+import FileComponent from "./components/FileComponent";
+import { fileTree } from "./data";
+
 const App = () => {
-	return <div>App</div>;
+	return (
+		<div>
+			<FileComponent fileTree={fileTree} />
+		</div>
+	);
 };
 
 export default App;
