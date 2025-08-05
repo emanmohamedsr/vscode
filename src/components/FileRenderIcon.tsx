@@ -1,4 +1,4 @@
-import { fileIconsPathsSvg } from "../data";
+import { fileIconsPathsSvg } from "../constants";
 import ImageIcon from "./ImageIcon";
 import FileIcon from "./SVG/File";
 
