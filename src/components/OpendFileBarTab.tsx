@@ -42,12 +42,12 @@ const OpendFileBarTab = ({ file: { id, name, content } }: Iprops) => {
 	return (
 		<div
 			onClick={activateFileHandler}
-			className={`min-w-44 max-w-80 border-3 hover:bg-white/5 border-gray-500  flex items-center justify-between p-2 text-white cursor-pointer ${
+			className={`min-w-44 max-w-fit border-3 hover:bg-white/5 border-gray-500  flex items-center justify-between p-2 text-white cursor-pointer ${
 				clickedFile.fileId === id ? "border-b-transparent border-sky-700" : ""
 			}`}>
-			<div className='flex items-center space-x-2'>
+			<div className='flex items-center gap-2'>
 				<FileRenderIcon name={name} />
-				<p className='flex-shrink-1'>{name}</p>
+				<p>{name}</p>
 			</div>
 			<div
 				className='p-0.5 hover:bg-white/15 '

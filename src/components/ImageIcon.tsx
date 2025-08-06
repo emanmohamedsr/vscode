@@ -1,9 +1,10 @@
 interface Iprops {
 	src: string;
+	clasName?: string;
 }
 
-const ImageIcon = ({ src }: Iprops) => {
-	return <img className='w-5 h-5' src={src} alt='icon' />;
+const ImageIcon = ({ src, clasName = "w-5 h-5" }: Iprops) => {
+	return <img className={clasName} src={src} alt='icon' />;
 };
 
 export default ImageIcon;

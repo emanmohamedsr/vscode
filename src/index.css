@@ -4,3 +4,34 @@ body {
   background-color: black;
   color: white;
 }
+
+[data-panel-collapsed] {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #4443431e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #19499667;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #174a9c67;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #19499667 #4443431e;
+  scroll-behavior: smooth;
+}
