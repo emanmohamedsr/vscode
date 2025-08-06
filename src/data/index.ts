@@ -8,23 +8,6 @@ export const fileTree: IFile = {
 	children: [
 		{
 			id: uuid(),
-			name: "public",
-			isFolder: true,
-			children: [
-				{
-					id: uuid(),
-					name: "index.html",
-					isFolder: false,
-				},
-				{
-					id: uuid(),
-					name: "index.css",
-					isFolder: false,
-				},
-			],
-		},
-		{
-			id: uuid(),
 			name: "node_modules",
 			isFolder: true,
 			children: [
@@ -46,6 +29,86 @@ export const fileTree: IFile = {
 							],
 						},
 					],
+				},
+			],
+		},
+		{
+			id: uuid(),
+			name: "public",
+			isFolder: true,
+			children: [
+				{
+					id: uuid(),
+					name: "index.html",
+					isFolder: false,
+				},
+				{
+					id: uuid(),
+					name: "index.css",
+					isFolder: false,
+				},
+			],
+		},
+		{
+			id: uuid(),
+			name: "src",
+			isFolder: true,
+			children: [
+				{
+					id: uuid(),
+					name: "app",
+					isFolder: true,
+					children: [
+						{
+							id: uuid(),
+							name: "store.ts",
+							isFolder: false,
+							content: `import { configureStore } from "@reduxjs/toolkit";
+import fileTreeReducer from "./features/fileTreeSlice";
+export const store = configureStore({
+	reducer: {
+		fileTree: fileTreeReducer,
+	},
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+export type AppStore = typeof store;
+`,
+						},
+					],
+				},
+				{
+					id: uuid(),
+					name: "components",
+					isFolder: true,
+					children: [
+						{
+							id: uuid(),
+							name: "OpenedFilesBar.tsx",
+							isFolder: false,
+						},
+						{
+							id: uuid(),
+							name: "OpendFileBarTab.tsx",
+							isFolder: false,
+						},
+						{
+							id: uuid(),
+							name: "FileComponent.tsx",
+							isFolder: false,
+						},
+					],
+				},
+				{
+					id: uuid(),
+					name: "interfaces.ts",
+					isFolder: false,
+				},
+				{
+					id: uuid(),
+					name: "utils.ts",
+					isFolder: false,
 				},
 			],
 		},

@@ -7,10 +7,13 @@ const OpenedFilesBar = () => {
 
 	if (openedFiles.length > 0)
 		return (
-			<div className='border border-gray-500 flex overflow-x-auto shadow-sm px-2 py-1  space-x-1'>
+			<div>
 				{openedFiles.map((file) => (
 					<div key={file.id}>
-						<OpendFileBarTab file={file} />
+						<div className='border border-gray-500 flex overflow-x-auto shadow-sm px-2 py-1  space-x-1'>
+							<OpendFileBarTab file={file} />
+						</div>
+						<div className='container mx-auto p-4'>{file.content || ""}</div>
 					</div>
 				))}
 			</div>
