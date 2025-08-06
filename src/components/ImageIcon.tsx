@@ -3,7 +3,7 @@ interface Iprops {
 }
 
 const ImageIcon = ({ src }: Iprops) => {
-	return <img className='w-7 h-7' src={src} alt='icon' />;
+	return <img className='w-5 h-5' src={src} alt='icon' />;
 };
 
 export default ImageIcon;

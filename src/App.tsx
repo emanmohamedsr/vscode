@@ -1,25 +1,16 @@
-import { useSelector } from "react-redux";
-import type { RootState } from "./app/store";
 import FileComponent from "./components/FileComponent";
 import { fileTree } from "./data";
+import OpenedFilesBar from "./components/OpenedFilesBar";
 
 const App = () => {
-	const { openedFiles } = useSelector(({ fileTree }: RootState) => fileTree);
 	return (
-		<div>
-			<FileComponent fileTree={fileTree} />
-			{openedFiles.length > 0 && (
-				<div className='mt-8'>
-					<h2 className='text-2xl font-bold'>Opened Files</h2>
-					<ul>
-						{openedFiles.map((file) => (
-							<li key={file.id} className='my-2'>
-								<p className='text-lg'>{file.name}</p>
-							</li>
-						))}
-					</ul>
-				</div>
-			)}
+		<div className='min-h-screen p-4 flex'>
+			<div className=' shadow-md border border-gray-500 p-4 overflow-y-auto min-w-60'>
+				<FileComponent fileTree={fileTree} />
+			</div>
+			<div className='flex-1'>
+				<OpenedFilesBar />
+			</div>
 		</div>
 	);
 };

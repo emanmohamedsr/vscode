@@ -27,7 +27,7 @@ const FileComponent = ({ fileTree }: Iprops) => {
 		dispatch(setOpenedFiles([...openedFiles, fileTree]));
 	};
 	return (
-		<div className='m-4 my-2'>
+		<div className=' m-4 my-2'>
 			{isFolder ? (
 				<div
 					className='flex items-center space-x-2 cursor-pointer'
@@ -39,6 +39,7 @@ const FileComponent = ({ fileTree }: Iprops) => {
 							isFolder={isFolder}
 							isOpen={isOpenFolder}
 						/>
+						<p className='text-xl font-medium'>{name}</p>
 					</div>
 				</div>
 			) : (
