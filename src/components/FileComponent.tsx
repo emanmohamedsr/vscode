@@ -53,7 +53,7 @@ const FileComponent = ({ fileTree }: Iprops) => {
 							isFolder={isFolder}
 							isOpen={isOpenFolder}
 						/>
-						<p className='text-xl font-medium'>{name}</p>
+						<p className='text-[1.2rem]'>{name}</p>
 					</div>
 				</div>
 			) : (
@@ -64,7 +64,7 @@ const FileComponent = ({ fileTree }: Iprops) => {
 						activateFileHandler();
 					}}>
 					<FileRenderIcon name={name} />
-					<p className='text-xl font-medium'>{name}</p>
+					<p className='text-[1.2rem]'>{name}</p>
 				</div>
 			)}
 			<div>
