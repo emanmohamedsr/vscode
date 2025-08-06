@@ -5,7 +5,7 @@ import RightArrowIcon from "./SVG/Right";
 import FileRenderIcon from "./FileRenderIcon";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../app/store";
-import { setOpenedFiles } from "../app/features/fileTreeSlice";
+import { setClickedFile, setOpenedFiles } from "../app/features/fileTreeSlice";
 import { doseFileObjectExist } from "../utils";
 
 interface Iprops {
@@ -13,9 +13,11 @@ interface Iprops {
 }
 
 const FileComponent = ({ fileTree }: Iprops) => {
-	const { id, name, isFolder, children } = fileTree;
+	const { id, name, isFolder, children, content } = fileTree;
 
-	const { openedFiles } = useSelector(({ fileTree }: RootState) => fileTree);
+	const { openedFiles, clickedFile } = useSelector(
+		({ fileTree }: RootState) => fileTree,
+	);
 	const dispatch = useDispatch();
 
 	const [isOpenFolder, setIsOpenFolder] = useState<boolean>(true);
@@ -26,8 +28,20 @@ const FileComponent = ({ fileTree }: Iprops) => {
 		if (exists) return;
 		dispatch(setOpenedFiles([...openedFiles, fileTree]));
 	};
+	const activateFileHandler = () => {
+		dispatch(
+			setClickedFile({
+				fileId: id,
+				fileName: name,
+				fileContent: content || "",
+			}),
+		);
+	};
 	return (
-		<div className=' m-4 my-2'>
+		<div
+			className={`p-1 ml-3 ${
+				clickedFile.fileId === id ? "bg-white/15" : "bg-black"
+			}`}>
 			{isFolder ? (
 				<div
 					className='flex items-center space-x-2 cursor-pointer'
@@ -45,7 +59,10 @@ const FileComponent = ({ fileTree }: Iprops) => {
 			) : (
 				<div
 					className='flex items-center space-x-2 cursor-pointer'
-					onClick={addOpenedFileHandler}>
+					onClick={() => {
+						addOpenedFileHandler();
+						activateFileHandler();
+					}}>
 					<FileRenderIcon name={name} />
 					<p className='text-xl font-medium'>{name}</p>
 				</div>
