@@ -4,9 +4,9 @@ A modern, feature-rich Visual Studio Code clone built with React, TypeScript, an
 
 ## Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://vscode-clone.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://vscode-ashen.vercel.app)
 
-## ✨ Features
+## Features
 
 ### File Explorer
 

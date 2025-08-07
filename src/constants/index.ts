@@ -1,97 +1,117 @@
 export const fileIconsPaths: Record<string, string> = {
 	//** Core Web Files */
-	html: "/public/icons/html",
-	css: "/public/icons/css",
-	js: "/public/icons/javascript",
-	ts: "/public/icons/typescript",
-	jsx: "/public/icons/react",
-	tsx: "/public/icons/react_ts",
-	json: "/public/icons/json",
-	md: "/public/icons/markdown",
+	html: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/html",
+	css: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/css",
+	js: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/javascript",
+	ts: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/typescript",
+	jsx: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/react",
+	tsx: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/react_ts",
+	json: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/json",
+	md: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/markdown",
 
 	//** Common Programming Languages */
-	py: "/public/icons/python",
-	java: "/public/icons/java",
-	cs: "/public/icons/csharp",
-	cpp: "/public/icons/cpp",
-	c: "/public/icons/c",
-	rb: "/public/icons/ruby",
-	go: "/public/icons/go",
-	rs: "/public/icons/rust",
-	php: "/public/icons/php",
-	swift: "/public/icons/swift",
-	kt: "/public/icons/kotlin",
-	dart: "/public/icons/dart",
+	py: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/python",
+	java: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/java",
+	cs: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/csharp",
+	cpp: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/cpp",
+	c: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/c",
+	rb: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/ruby",
+	go: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/go",
+	rs: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/rust",
+	php: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/php",
+	swift: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/swift",
+	kt: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/kotlin",
+	dart: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/dart",
 
 	//** Configuration & Build Files */
-	env: "/public/icons/tune",
-	yml: "/public/icons/yaml",
-	yaml: "/public/icons/yaml",
-	lock: "/public/icons/lock",
-	gitignore: "/public/icons/git",
-	dockerfile: "/public/icons/docker",
-	makefile: "/public/icons/makefile",
+	env: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/tune",
+	yml: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/yaml",
+	yaml: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/yaml",
+	lock: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/lock",
+	gitignore:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/git",
+	dockerfile:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/docker",
+	makefile:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/makefile",
 
 	//** Assets */
-	png: "/public/icons/image",
-	jpg: "/public/icons/image",
-	jpeg: "/public/icons/image",
-	gif: "/public/icons/image",
-	svg: "/public/icons/svg",
-	mp4: "/public/icons/video",
-	mp3: "/public/icons/audio",
-	wav: "/public/icons/audio",
+	png: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/image",
+	jpg: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/image",
+	jpeg: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/image",
+	gif: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/image",
+	svg: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/svg",
+	mp4: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/video",
+	mp3: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/audio",
+	wav: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/audio",
 
 	//** Documents */
-	pdf: "/public/icons/pdf",
-	doc: "/public/icons/word",
-	docx: "/public/icons/word",
-	xls: "/public/icons/excel",
-	xlsx: "/public/icons/excel",
-	ppt: "/public/icons/powerpoint",
-	pptx: "/public/icons/powerpoint",
-	txt: "/public/icons/document",
+	pdf: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/pdf",
+	doc: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/word",
+	docx: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/word",
+	xls: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/excel",
+	xlsx: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/excel",
+	ppt: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/powerpoint",
+	pptx: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/powerpoint",
+	txt: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/document",
 
 	//** Executables & Archives */
-	exe: "/public/icons/exe",
-	dll: "/public/icons/exe",
-	zip: "/public/icons/zip",
-	tar: "/public/icons/zip",
-	gz: "/public/icons/zip",
+	exe: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/exe",
+	dll: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/exe",
+	zip: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/zip",
+	tar: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/zip",
+	gz: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/zip",
 
 	//** Scripts */
-	sh: "/public/icons/command",
-	ps1: "/public/icons/powershell",
-	bat: "/public/icons/command",
-	cmd: "/public/icons/command",
+	sh: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/command",
+	ps1: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/powershell",
+	bat: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/command",
+	cmd: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/command",
 
 	//** Databases */
-	sql: "/public/icons/database",
-	db: "/public/icons/database",
+	sql: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/database",
+	db: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/database",
 
 	//** Modern Web Frameworks */
-	vue: "/public/icons/vue",
-	svelte: "/public/icons/svelte",
-	astro: "/public/icons/astro",
+	vue: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/vue",
+	svelte:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/svelte",
+	astro: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/astro",
 
 	//** Essential Folders */
-	node_modules: "/public/icons/folder-node",
-	public: "/public/icons/folder-public",
-	src: "/public/icons/folder-src",
-	dist: "/public/icons/folder-dist",
-	build: "/public/icons/folder-dist",
-	assets: "/public/icons/folder-images",
-	images: "/public/icons/folder-images",
-	components: "/public/icons/folder-components",
-	pages: "/public/icons/folder-views",
-	routes: "/public/icons/folder-routes",
-	styles: "/public/icons/folder-css",
-	tests: "/public/icons/folder-test",
-	__tests__: "/public/icons/folder-test",
-	config: "/public/icons/folder-config",
-	docs: "/public/icons/folder-docs",
-	types: "/public/icons/folder-typescript",
-	vscode: "/public/icons/folder-vscode",
-	github: "/public/icons/folder-github",
-	gitlab: "/public/icons/folder-gitlab",
+	node_modules:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-node",
+	public:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-public",
+	src: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-src",
+	dist: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-dist",
+	build:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-dist",
+	assets:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-images",
+	images:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-images",
+	components:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-components",
+	pages:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-views",
+	routes:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-routes",
+	styles:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-css",
+	tests:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-test",
+	__tests__:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-test",
+	config:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-config",
+	docs: "https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-docs",
+	types:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-typescript",
+	vscode:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-vscode",
+	github:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-github",
+	gitlab:
+		"https://github.com/emanmohamedsr/vscode/tree/main/public/icons/folder-gitlab",
 };
