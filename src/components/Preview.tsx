@@ -22,7 +22,7 @@ const Preview = () => {
 			) : (
 				<div className='border border-gray-500 h-screen flex items-center justify-center'>
 					<ImageIcon
-						src='https://github.com/emanmohamedsr/vscode/tree/main/public/icons/vscode.svg'
+						src='/icons/vscode.svg'
 						className='w-[50%] h-[50%] object-contain'
 					/>
 				</div>
