@@ -25,9 +25,8 @@ const FileRenderIcon = ({ name, isFolder, isOpen }: Iprops) => {
 	}
 
 	if (isFolder && isOpen)
-		return <ImageIcon src='/public/icons/folder-default-open.svg' />;
-	if (isFolder && !isOpen)
-		return <ImageIcon src='/public/icons/folder-default.svg' />;
+		return <ImageIcon src='/icons/folder-default-open.svg' />;
+	if (isFolder && !isOpen) return <ImageIcon src='/icons/folder-default.svg' />;
 	return <FileIcon />;
 };
 
