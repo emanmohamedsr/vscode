@@ -26,7 +26,9 @@ const FileComponent = ({ fileTree }: Iprops) => {
 	const addOpenedFileHandler = () => {
 		const exists = doseFileObjectExist(openedFiles, id);
 		if (exists) return;
-		dispatch(setOpenedFiles([...openedFiles, fileTree]));
+		const newFiles = [...openedFiles, fileTree];
+		if (newFiles.length > 5) newFiles.shift();
+		dispatch(setOpenedFiles(newFiles));
 	};
 	const activateFileHandler = () => {
 		dispatch(

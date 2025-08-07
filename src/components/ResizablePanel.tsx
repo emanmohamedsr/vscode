@@ -27,7 +27,7 @@ const ResizablePanel = ({
 					<Panel
 						collapsible={true}
 						collapsedSize={0}
-						minSize={20}
+						minSize={10}
 						defaultSize={defaultLayout[0]}>
 						{leftPanel}
 					</Panel>

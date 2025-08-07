@@ -2,7 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import type { IFile } from "../interfaces";
 import FileRenderIcon from "./FileRenderIcon";
 import CloseIcon from "./SVG/CloseIcon";
-import { setClickedFile, setOpenedFiles } from "../app/features/fileTreeSlice";
+import {
+	setClickedFile,
+	setOpenedFiles,
+	setTriggeredTabID,
+} from "../app/features/fileTreeSlice";
 import type { RootState } from "../app/store";
 
 interface Iprops {
@@ -39,8 +43,13 @@ const OpendFileBarTab = ({ file: { id, name, content } }: Iprops) => {
 			}),
 		);
 	};
+
 	return (
 		<div
+			onContextMenu={(e) => {
+				e.preventDefault();
+				dispatch(setTriggeredTabID(id));
+			}}
 			onClick={activateFileHandler}
 			className={`min-w-44 max-w-fit border-3 hover:bg-white/5 border-gray-500  flex items-center justify-between p-2 text-white cursor-pointer ${
 				clickedFile.fileId === id ? "border-b-transparent border-sky-700" : ""
